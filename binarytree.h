@@ -1,11 +1,6 @@
 #ifndef _BINARYTREE_H_INCLUDED_
 #define _BINARYTREE_H_INCLUDED_
 
-#include <iostream>
-#include <stdlib.h>
-#include <queue>
-using namespace std;
-
 template<class T>
 class binaryTree {
 	struct Node {
@@ -13,13 +8,7 @@ class binaryTree {
 		Node *left;
 		Node *right;
 	};
-	Node *createNode(T key) {
-		Node *t = (Node *)malloc(sizeof(Node));
-		t->data = key;
-		t->left = NULL;
-		t->right = NULL;
-		return t;
-	}
+	Node *createNode(T key);
 public:
 	Node *root;
 	binaryTree();

@@ -1,6 +1,18 @@
 #include "binarytree.h"
+#include <iostream>
+#include <stdlib.h>
+#include <queue>
 
 using namespace std;
+
+template<class T>
+typename binaryTree<T>::Node* binaryTree<T>::createNode(T key) {
+	Node *t = (Node *)malloc(sizeof(Node));
+	t->data = key;
+	t->left = NULL;
+	t->right = NULL;
+	return t;
+}
 
 template<class T>
 binaryTree<T>::binaryTree() {
